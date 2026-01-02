@@ -1,37 +1,22 @@
 # Guia Turístico – Coromandel
 
-Site simples e bonito para apresentar pontos turísticos de **Coromandel**, curiosidades e um **formulário de contato**.  
-Backend em **Flask** serve os arquivos estáticos, registra os contatos em **SQLite** e retorna confirmação.  
-O envio de e-mail está **desativado por padrão** (pode ser habilitado depois).
+Site simples e bonito para apresentar pontos turísticos de **Coromandel - MG**, com informações sobre os principais atrativos da cidade, curiosidades locais e formulário de contato.
+
+Desenvolvido com **HTML5**, **CSS3** e **JavaScript** puro.
 
 ---
 
-## ✨ Páginas
+## 🚀 Como rodar o projeto
 
-- **Início** (`index.html`) — apresentação do site
-- **Pontos Turísticos** (`pagina2.html`) — cards com fotos
-- **Curiosidades** (`pagina3.html`) — lista de curiosidades
-- **Contato** (`pagina4.html`) — formulário (nome, e-mail, mensagem)
+### **Live Server (VS Code)**
 
----
-
-## 🧰 Tecnologias
-
-- **Frontend:** HTML5, CSS3 (Poppins), JavaScript (vanilla)
-- **Backend:** Python 3, **Flask**, **Flask-CORS**
-- **Banco:** **SQLite** (arquivo `contatos.db`)
-- **Utilitários:** `requests`, `python-dotenv`, `google-api-python-client` *(para futuro envio por Gmail OAuth2)*
+1. Instale a extensão **"Live Server"** no VS Code
+2. Abra a pasta do projeto no VS Code
+3. Navegue até `src/pages/pagina1.html`
+4. Clique com o botão direito no arquivo
+5. Selecione **"Open with Live Server"**
+6. O site abrirá automaticamente no navegador com hot reload ativado
 
 ---
 
-## ✅ Pré-requisitos
-
-- Python 3.10+
-- (Opcional) VS Code com extensão **Python**
-
----
-
-## ▶️ Como rodar
-
- - Apertar F5 no VS Code ou no terminal: python start.py
-   
+Feito com ❤️ para Coromandel - MG

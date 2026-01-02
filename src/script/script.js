@@ -42,34 +42,25 @@
       return;
     }
 
-    try {
-      $btn && ($btn.disabled = true);
+    // Desabilita o botão temporariamente
+    $btn && ($btn.disabled = true);
 
-      const resp = await fetch("/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nome, email, mensagem }),
-      });
-
-      const data = await resp.json().catch(() => ({}));
-
-      if (resp.ok && data?.success) {
-        alert(data.message || "Contato enviado com sucesso!");
-        form.reset();
+    // Simula um pequeno delay de envio
+    setTimeout(() => {
+      // Exibe mensagem de sucesso
+      alert(`✅ Mensagem enviada com sucesso!\n\nNome: ${nome}\nE-mail: ${email}\nMensagem: ${mensagem}\n\n(Simulação - sem backend conectado)`);
       
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      } else {
-        alert(
-          data?.message ||
-            "Não foi possível enviar agora. Tente novamente mais tarde."
-        );
-      }
-    } catch (err) {
-      console.error(err);
-      alert("Erro de rede ao enviar. Verifique sua conexão.");
-    } finally {
+      // Limpa o formulário
+      form.reset();
+      
+      // Volta ao topo da página
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      
+      // Reabilita o botão
       $btn && ($btn.disabled = false);
-    }
+      
+      console.log("Contato enviado:", { nome, email, mensagem });
+    }, 500);
   }
 
   form.addEventListener("submit", enviarContato);
