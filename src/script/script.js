@@ -18,7 +18,6 @@
   const $mensagem =
     document.getElementById("mensagem") ||
     form.querySelector('[name="mensagem"]');
-
   const $btn = form.querySelector('button[type="submit"]');
 
   function isValidEmail(v) {
@@ -36,27 +35,23 @@
       alert("Preencha nome, e-mail e mensagem.");
       return;
     }
+
     if (!isValidEmail(email)) {
       alert("E-mail inválido.");
       $email?.focus();
       return;
     }
 
-    // Desabilita o botão temporariamente
     $btn && ($btn.disabled = true);
 
-    // Simula um pequeno delay de envio
-    setTimeout(() => {
-      // Exibe mensagem de sucesso
+    setTimeout(() => { 
+
       alert(`✅ Mensagem enviada com sucesso!\n\nNome: ${nome}\nE-mail: ${email}\nMensagem: ${mensagem}\n\n(Simulação - sem backend conectado)`);
-      
-      // Limpa o formulário
+
       form.reset();
       
-      // Volta ao topo da página
       window.scrollTo({ top: 0, behavior: "smooth" });
       
-      // Reabilita o botão
       $btn && ($btn.disabled = false);
       
       console.log("Contato enviado:", { nome, email, mensagem });
