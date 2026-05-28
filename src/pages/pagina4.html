@@ -6,7 +6,8 @@
   <link rel="stylesheet" href="../css/style.css">
   <script defer src="../script/script.js"></script>
 </head>
-<body>
+<body class="contact-page">
+
   <header>
     <h1>Contato - Coromandel</h1>
     <nav>
@@ -14,17 +15,32 @@
         <li><a href="pagina1.html">Início</a></li>
         <li><a href="pagina2.html">Pontos Turísticos</a></li>
         <li><a href="pagina3.html">Curiosidades</a></li>
-        <li><a href="pagina4.html">Contato</a></li>
+        <li><a href="pagina4.html" class="active">Contato</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
+    <h2>Entre em contato</h2>
+
     <form id="contactForm">
       <div id="form-message" style="display: none;"></div>
-      <label>Nome:<br><input type="text" id="nome" required></label><br>
-      <label>Email:<br><input type="email" id="email" required></label><br>
-      <label>Mensagem:<br><textarea id="mensagem" required></textarea></label><br>
+
+      <label>
+        Nome:
+        <input type="text" id="nome" required>
+      </label>
+
+      <label>
+        Email:
+        <input type="email" id="email" required>
+      </label>
+
+      <label>
+        Mensagem:
+        <textarea id="mensagem" required></textarea>
+      </label>
+
       <button type="submit">Enviar</button>
     </form>
   </main>
@@ -32,6 +48,6 @@
   <footer>
     <p>&copy; 2025 Guia Turístico - Coromandel / Lucas Fernandes</p>
   </footer>
+  
 </body>
 </html>
-

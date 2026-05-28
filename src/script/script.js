@@ -1,5 +1,4 @@
 (function () {
-
   const form =
     document.getElementById("contactForm") ||
     document.querySelector("form");
@@ -44,16 +43,16 @@
 
     $btn && ($btn.disabled = true);
 
-    setTimeout(() => { 
-
-      alert(`✅ Mensagem enviada com sucesso!\n\nNome: ${nome}\nE-mail: ${email}\nMensagem: ${mensagem}\n\n(Simulação - sem backend conectado)`);
+    setTimeout(() => {
+      alert(
+        `✅ Mensagem enviada com sucesso!\n\nNome: ${nome}\nE-mail: ${email}\nMensagem: ${mensagem}\n\n(Simulação - sem backend conectado)`
+      );
 
       form.reset();
-      
       window.scrollTo({ top: 0, behavior: "smooth" });
-      
+
       $btn && ($btn.disabled = false);
-      
+
       console.log("Contato enviado:", { nome, email, mensagem });
     }, 500);
   }
